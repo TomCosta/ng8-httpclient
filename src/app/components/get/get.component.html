@@ -1,0 +1,39 @@
+<div class="container wrapper">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="inner">
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Lista de Produtos</h3>
+                    </div>
+                    <div class="col-6 text-right">    
+                        <button type="button" class="btn btn-light btn-sm move-right" [routerLink]="['/add']">Adicionar Produto</button>
+                    </div>
+                </div>
+                <br>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Dedcrição</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let prod of productList">
+                            <th scope="row">{{prod?.id}}</th>
+                            <td>{{prod.prod_name}}</td>
+                            <td>{{prod.prod_desc}}</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm move-right" [routerLink]="['/edit/', prod.id]">Editar</button>
+                                |
+                                <button type="button" class="btn btn-danger btn-sm" (click)="deleteProd(prod)">Deletar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

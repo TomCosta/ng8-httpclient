@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "prod_name": "Buzz Light Years",
+      "prod_desc": "O melhor personagem de Toy Story",
+      "id": 1
+    },
+    {
+      "prod_name": "Fire Ware 2.0",
+      "prod_desc": "O software para a sua proteção, sistema Window.",
+      "id": 2
+    },
+    {
+      "prod_name": "RX SOLAR",
+      "prod_desc": "Placa multi voltaica solar.",
+      "id": 3
+    }
+  ]
+}

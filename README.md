@@ -1,5 +1,5 @@
 # Ng8Httpclient
-![Ng8Httpclient](./src/assets/imgs/Angular-8.jpg)
+![Ng8Httpclient](./src/assets/imgs/angular8-logo.jpg)
 
 ## Projeto Tutorial desenvolvido para testar HttpClient & Http, Build e consumo de API RESTful com Angular 8
 ### Faz uso de um Fake Backend Server com json-server

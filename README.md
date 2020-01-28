@@ -1,4 +1,5 @@
 # Ng8Httpclient
+![Ng8Httpclient](./src/assets/imgs/Angular-8.jpg)
 
 ## Projeto Tutorial desenvolvido para testar HttpClient & Http, Build e consumo de API RESTful com Angular 8
 ### Faz uso de um Fake Backend Server com json-server
@@ -26,8 +27,8 @@ json-server --watch backend/database.json
 ng serve
 ``` 
 # 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23.
-
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.23, [Node.JS](https://nodejs.org/en/download/)
+version 12.11.1
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

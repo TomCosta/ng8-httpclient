@@ -13,7 +13,7 @@ export class GetComponent implements OnInit {
   productList: any = [];
 
   ngOnInit() {
-    this.getProds();
+    // this.getProds();
   }
 
   constructor(

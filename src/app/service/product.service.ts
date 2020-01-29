@@ -10,7 +10,7 @@ import { Product } from './product';
 
 export class ProdService {
 
-  urlBase = 'http://localhost:3000';
+  urlBase = 'https://meusprodutos.free.beeceptor.com';
 
   constructor(
     private http: HttpClient
@@ -19,12 +19,14 @@ export class ProdService {
 
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/json'
-    })
-  }
+      'Accept': 'text/plain',
+      'Content-Type': 'text/plain'
+    }),
+    'responseType': 'text' as 'json'
+  };
 
-  CreateProd(data): Observable<Product> {
-    return this.http.post<Product>(this.urlBase + '/products/', JSON.stringify(data), this.httpOptions)
+  CreateProd(data: Product) {
+    return this.http.post(this.urlBase + '/products/', JSON.stringify(data), this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)

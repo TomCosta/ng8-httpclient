@@ -10,8 +10,9 @@ import { Product } from './product';
 
 export class ProdService {
 
-  urlBase = 'https://meusprodutos.free.beeceptor.com';
-
+  // urlBase = 'https://products.free.beeceptor.com'; // Use a sua própria url, ou da sua Api ou server real
+  urlBase = 'http://localhost:3000';  // Use a url do Json-server para fazer os testes
+  
   constructor(
     private http: HttpClient
   ){    
@@ -20,7 +21,8 @@ export class ProdService {
   httpOptions = {
     headers: new HttpHeaders({
       'Accept': 'text/plain',
-      'Content-Type': 'text/plain'
+      'Content-Type': 'application/json',
+      'Authorization': '14ac5499cfdd2bb2859e4476d2e5b1d2bad079bf'
     }),
     'responseType': 'text' as 'json'
   };

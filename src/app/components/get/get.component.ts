@@ -26,6 +26,7 @@ export class GetComponent implements OnInit {
   getProds() {
     this.productList = [];
     return this.prodService.GetProds().subscribe((data: Product) => {
+      console.log('Get Data: ', data);
       this.productList.push(data);
     })
   }

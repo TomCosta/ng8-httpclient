@@ -1,6 +1,7 @@
 import { ProdService } from '../../service/product.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from './../../service/product';
 
 @Component({
   selector: 'app-get',
@@ -10,20 +11,22 @@ import { Router } from '@angular/router';
 
 export class GetComponent implements OnInit {
 
-  productList: any = [];
+  productList: Array<Product>;
 
   ngOnInit() {
-    // this.getProds();
+    this.getProds();
   }
 
   constructor(
     public prodService: ProdService,
     private router: Router
-  ){ }
+  ){    
+  }
 
   getProds() {
-    return this.prodService.GetProds().subscribe((data: {}) => {
-      this.productList = data;
+    this.productList = [];
+    return this.prodService.GetProds().subscribe((data: Product) => {
+      this.productList.push(data);
     })
   }
 

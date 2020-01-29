@@ -34,7 +34,7 @@ export class ProdService {
   }  
 
   GetProd(id): Observable<Product> {
-    return this.http.get<Product>(this.urlBase + '/products/' + id)
+    return this.http.get<Product>(this.urlBase + '/products/' + id, this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)
@@ -42,7 +42,7 @@ export class ProdService {
   }
 
   GetProds(): Observable<Product> {
-    return this.http.get<Product>(this.urlBase + '/products/')
+    return this.http.get<Product>(this.urlBase + '/products/', this.httpOptions)
     .pipe(
       retry(1),
       catchError(this.errorHandl)

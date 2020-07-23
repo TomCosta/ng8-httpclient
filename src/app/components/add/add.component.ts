@@ -27,12 +27,14 @@ export class AddComponent implements OnInit {
 
   addProd() {
     this.prodForm = this.fb.group({
-      prod_name: [''],
-      prod_desc: ['']
+      prod_name: ['Notebook'],
+      prod_desc: ['Asus 7100XL']
     });
+    console.log('Raio X: ', this.prodForm.value);
   }
 
   submitForm() {
+    console.log('mySubmit: ', this.prodForm.value);
     this.prodService.CreateProd(this.prodForm.value).subscribe(res => {
       console.log('Produto: ', res);
       this.ngZone.run(() => this.router.navigateByUrl('/'));
